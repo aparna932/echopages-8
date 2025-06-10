@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="userstyle.css" />
+    <!-- Font Awesome for pencil icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar left-sidebar">
+            <ul>
+                <li><i class="fas fa-home"></i></li>
+                <li><i class="fas fa-user"></i></li>
+                <li><i class="fas fa-bell"></i></li>
+                <li><i class="fas fa-cog"></i></li>
+            </ul>
+        </div>
+
+        <!-- Center Content -->
+        <div class="center-content">
+            <div class="profile-card">
+                <img src="WhatsApp Image 2025-04-20 at 20.10.23_11deb391.jpg" alt="Profile Picture" class="profile-img">
+                
+                <h2 class="profile-name" id="profile-name">
+                    Aaryan Ajeeth Kumar 
+                    <button onclick="editProfile('name')" title="Edit Name">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </h2>
+
+                <p class="username" id="username">
+                    @aaryan.exe 
+                    <button onclick="editProfile('username')" title="Edit Username">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </p>
+
+                <p class="role-tag" id="role-tag">
+                    College Kid With Big Dreams and Empty Pockets 
+                    <button onclick="editProfile('role')" title="Edit Role">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                </p>
+
+                <div class="stats">
+                    <div><strong>245</strong><span> Followers</span></div>
+                    <div><strong>180</strong><span> Following</span></div>
+                </div>
+
+                <button class="logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar right-sidebar">
+            <ul>
+                <li><i class="fas fa-search"></i></li>
+                <li><i class="fas fa-bookmark"></i></li>
+                <li><i class="fas fa-envelope"></i></li>
+                <li><i class="fas fa-power-off"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Particle Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.1/tsparticles.min.js"
+        integrity="sha512-PYHWDEuXOTJ9MZ+/QHqkbgiEYZ+LImQv3i/9NyYOABFvK37e4q4Wg7aQDN1JpoGiEu1TYZh6JMrZluZox2gbDA=="
+        crossorigin="anonymous"></script>
+
+    <script src="userscript.js"></script>
+</body>
+
+</html>

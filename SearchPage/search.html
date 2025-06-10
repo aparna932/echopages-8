@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Page</title>
+    <link rel="stylesheet" href="searchstyle.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="tsparticles"></div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search..." id="search-input">
+        <button class="search-button" onclick="performSearch()">
+            <i class="fas fa-search"></i> Search
+        </button>
+    </div>
+
+    <!-- Left Sidebar -->
+    <div class="sidebar left-sidebar">
+        <ul>
+            <li><i class="fas fa-home"></i></li>
+            <li><i class="fas fa-user"></i></li>
+            <li><i class="fas fa-bell"></i></li>
+            <li><i class="fas fa-cog"></i></li>
+        </ul>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="sidebar right-sidebar">
+        <ul>
+            <li><i class="fas fa-search"></i></li>
+            <li><i class="fas fa-bookmark"></i></li>
+            <li><i class="fas fa-envelope"></i></li>
+            <li><i class="fas fa-power-off"></i></li>
+        </ul>
+    </div>
+
+    <!-- Search Results -->
+    <div class="results-container">
+        <div class="result-item">
+            <h3 class="result-title">Sample Result 1</h3>
+            <p class="result-description">Description for result item 1. More details about this result.</p>
+        </div>
+        <div class="result-item">
+            <h3 class="result-title">Sample Result 2</h3>
+            <p class="result-description">Description for result item 2. More details about this result.</p>
+        </div>
+        <div class="result-item">
+            <h3 class="result-title">Sample Result 3</h3>
+            <p class="result-description">Description for result item 3. More details about this result.</p>
+        </div>
+        <!-- More result items can go here -->
+    </div>
+
+    <!-- Particle Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.1/tsparticles.min.js"
+        integrity="sha512-PYHWDEuXOTJ9MZ+/QHqkbgiEYZ+LImQv3i/9NyYOABFvK37e4q4Wg7aQDN1JpoGiEu1TYZh6JMrZluZox2gbDA=="
+        crossorigin="anonymous"></script>
+    <script src="searchscript.js"></script>
+</body>
+
+</html>

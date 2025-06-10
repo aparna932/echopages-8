@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Public Diary</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- 🌠 Background for tsParticles if needed -->
+  <div id="tsparticles"></div>
+
+  <!-- 🔝 HEADER -->
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Public Diary Logo" class="logo" />
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+        <!-- 🍔 Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🏠 MAIN CONTENT -->
+  <main class="home-layout">
+    <!-- 📕 LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="/MyJournal/index.html">📓 My Journal</a></li>
+        <li class="spaced-item"><a href="/PublicFeed/index.html">🔥 Trending</a></li>
+        <li><a href="/SearchPage/index.html">🔍 Search</a></li>
+        <li><a href="#">👥 Follow Suggestions</a></li>
+        <li><a href="#">⚙️ Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- 🧾 FEED SECTION -->
+    <section class="feed">
+      <div class="post-box">
+        <textarea class="glow-textarea" placeholder="" rows="3"></textarea>
+        <span class="placeholder-text">How was your day?</span>
+        <style>
+          .post-box {
+            position: relative;
+          }
+          .glow-textarea {
+            position: relative;
+            z-index: 2;
+            background: #ffffff;
+            color: #000;
+          }
+          .placeholder-text {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            color: #7f9cf5;
+            pointer-events: none;
+            font-size: 1rem;
+            opacity: 0.8;
+            z-index: 1;
+            transition: opacity 0.2s;
+          }
+          .glow-textarea:focus + .placeholder-text,
+          .glow-textarea:not(:placeholder-shown) + .placeholder-text {
+            opacity: 0;
+          }
+        </style>
+        <script>
+          // Hide placeholder text when textarea has value or is focused
+          const textarea = document.querySelector('.glow-textarea');
+          const placeholder = document.querySelector('.placeholder-text');
+          textarea.addEventListener('input', function() {
+            placeholder.style.opacity = this.value ? '0' : '0.8';
+          });
+          textarea.addEventListener('focus', function() {
+            placeholder.style.opacity = '0';
+          });
+          textarea.addEventListener('blur', function() {
+            if (!this.value) placeholder.style.opacity = '0.8';
+          });
+        </script>
+        <style>
+          .glow-textarea {
+            box-shadow: 0 0 8px 2px #7f9cf5, 0 0 16px 4px #b794f4;
+            border: 1px solid #b794f4;
+            background: #ffffff;
+            color: #fff;
+            outline: none;
+            transition: box-shadow 0.3s;
+          }
+          .glow-textarea:focus {
+            box-shadow: 0 0 16px 4px #b794f4, 0 0 32px 8px #7f9cf5;
+            border-color: #7f9cf5;
+          }
+        </style>
+        <br><br>
+        <button class="btn-primary">Post</button>
+      </div>
+      <br>
+      <div class="post">
+        <h3>@diarygirl01</h3>
+        <p>Today was beautiful! Went on a long walk and watched the sunset 🌇.</p>
+        <div class="interactions">
+          <button>❤️ Like</button>
+          <button>💬 Comment</button>
+        </div>
+      </div>
+
+      <div class="post">
+        <h3>@coderlife</h3>
+        <p>Finally fixed that bug. Took 3 cups of coffee and 2 hours of debugging 😅.</p>
+        <div class="interactions">
+          <button>❤️ Like</button>
+          <button>💬 Comment</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🧠 RIGHT PANEL -->
+    <aside class="right-panel">
+      <input type="text" placeholder="Search users..." class="search-bar" />
+      <div class="suggestions">
+        <br>
+        <h4>Suggestions for you</h4>
+        <br />
+        <ul>
+          <li>
+            <span>@newuser_99</span>
+            <button class="btn-follow">Follow</button>
+          </li>
+          <br>
+          <li>
+            <span>@lifeinwords</span>
+            <button class="btn-follow">Follow</button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 🔚 FOOTER -->
+  <footer>
+    <div class="container centered-text">
+      <p>&copy; 2025 EchoPages. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 🎇 Libraries & Scripts -->
+  <!-- tsParticles CDN (if used, include URL here) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles"></script> -->
+
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- 🍔 Hamburger Toggle -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+
+  <!-- Your custom logic -->
+  <script src="script.js"></script>
+</body>
+
+</html>
