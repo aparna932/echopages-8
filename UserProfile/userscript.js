@@ -6,7 +6,6 @@ function editProfile(field) {
     
     if (newValue && newValue !== currentValue) {
         element.textContent = newValue;
-        // Here you would typically also update the value in your backend
     }
 }
 
